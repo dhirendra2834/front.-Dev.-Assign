@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- cdn of bar icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css" class="css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- hquery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" ></script>
+  <script>
+ $(document).ready(function(){
+    let clicked = false;
+    
+    $('#icon').click(function(){
+        clicked = !clicked; // Toggle the clicked variable
+        if (clicked) {
+            $('ul').toggleClass('show');
+            $('#btn1').css('display', 'none');
+            $('.nitem').css({
+                'width': 'calc(100% - 6px)',  // 6px (3px margin on each side)
+                'margin': '3px',
+                'margin-top': '2px'
+            });
+        } else {
+            $('ul').removeClass('show');
+            $('#btn1').css('display', 'block'); // Show the element
+            $('.nitem').css({
+                'width': '100%',
+                'margin': '0',
+                'margin-top': '0'
+            });
+        }
+    });
+});
+
+
+
+
+
+//     document.getElementById("icon").onclick = function() { 
+
+// document.getElementById("btn1").style.display = "none"; 
+
+
+  </script>
+</head>
+<body>
+    <nav style="display: flex; padding:20px 50px; margin:5px ">
+        <!-- <label class="logo">Quantum</label> -->
+        <span  id="nav1" style="flex-basis:300px;" >Startup 3</span>
+            <ul style="display: flex; justify-content: space-between;  flex-wrap: wrap;">
+                <!-- 1st  -->
+                   
+                        <li class="nitem"><a href="#">Home</a></li>
+                        <li class="nitem"><a href="#">Features</a></li>
+                        <li class="nitem"><a href="#">Blog</a></li>
+                        <li class="nitem"><a href="#">Shop</a></li>
+                        <li class="nav2item nitem"><i class="fa fa-search" ></i></i></div>
+                 
+                        <!-- 2nd  -->
+                       
+                            <li class="nitem" id="nav5" ><a>Sign In</a></li>
+                           <li  class="btn nitem"><a>Sign In</a></li>
+                        
+               
+            </ul>
+       <label id="icon"><i class="fas fa-bars"></i></label>
+    </nav>
+     <!-- below body of navbar  -->
+     <div style="text-align: center; margin-top:100px;  font-size: 20px;">
+
+        <div style="font-size: 60px; color: rgb(12, 12, 125); font-weight: bold; margin-top:30px; margin-bottom: 30px;">Startup Framework</div>
+        <div style="display: flex; flex-direction: column;">
+        <div style=" color:rgb(170, 170, 166); margin-left: auto; margin-right: auto; width: 500px;"> We made it so beautiful and simple.
+            It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!</div>
+        <div id="btn1" style="margin:15px; color:rgb(170, 170, 166); width:200px; margin-left: auto; margin-right: auto; margin-top:30px; color: white;">Purchase Now for $248</div>  
+        <div style="color:aqua ">Learn More</div> 
+        </div>
+        </div>
+</body>
+</html>
